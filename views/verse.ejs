@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Votre verset biblique</title>
+  <link rel="stylesheet" href="/general.css">
+  <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-2xl lg:max-w-md mx-auto mt-20 text-center">
+    <h1 class="text-4xl lg:text-2xl font-bold mb-4">Salut, <%= userName %> !</h1>
+    <p class="text-center text-2xl lg:text-base">La parole de Dieu est <em><b>esprit</b></em> et <em><b>vie</b></em>!</p>
+    <div class="bg-gray-200 p-6 mt-6 lg:mt-4 rounded">
+      <p class="text-2xl lg:text-xl italic mb-2"><%= verse.text %></p>
+      <p class="text-xl lg:text-lg text-gray-900 font-semibold"><%= verse.reference %></p>
+    </div>
+    <h2 class="text-2xl lg:text-lg font-bold mt-6">Si vous avez un ou des sujets de prière, nous serons ravis de vous soutenir.</h2>
+    <form action="/prayer" method="post" class="mt-4">
+      <input type="hidden" name="name" value="<%= userName %>">
+      <input type="hidden" name="number" value="<%= phoneNumber %>">
+      <textarea name="prayer" placeholder="Ecrivez vos sujets de prière ici" class="w-full p-2 border rounded focus:border-orange-300 focus:outline focus:outline-orange-300 text-2xl lg:text-base"></textarea>
+      <button type="submit" class="w-full bg-red-800 text-white py-6 lg:py-2 px-4 mt-4 lg:mt-2 rounded hover:bg-red-800 text-2xl lg:text-base">Envoyer mon sujet de prière</button>
+    </form>
+  </div>
+</body>
+</html>

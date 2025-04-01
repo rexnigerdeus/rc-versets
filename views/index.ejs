@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Revival Culture - Mon Verset</title>
+  <link rel="stylesheet" href="/general.css">
+  <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-2xl lg:max-w-md mx-auto mt-20">
+    <h1 class="text-4xl lg:text-2xl font-bold mb-4 text-center">Recevez un verset, une parole pour vous maintenant</h1>
+      <p class="text-center text-2xl lg:text-base">Entrez vos informations ci-dessous</p>
+    <form action="/verse" method="post">
+      <div class="mb-6 mt-12 lg:mt-8">
+        <label for="name" class="block text-gray-700 text-2xl lg:text-base">Nom :</label>
+        <input type="text" name="name" id="name" placeholder="Saisissez votre nom ici" class="mt-1 block w-full border-gray-300 rounded shadow-sm focus:border-orange-300 focus:outline focus:outline-orange-300 text-2xl lg:text-base" required>
+      </div>
+      <div class="mb-8 mt-8 lg:mt-4">
+        <label for="number" class="block text-gray-700 text-2xl lg:text-base">Numéro de téléphone :</label>
+        <input type="text" name="number" id="number" placeholder="Laissez-nous un contact direct ou whatsapp" class="mt-1 block w-full border-gray-300 rounded shadow-sm focus:border-orange-300 focus:outline focus:outline-orange-300 text-2xl lg:text-base" required>
+      </div>
+      <button type="submit" class="w-full bg-red-800 text-white py-6 lg:py-2 px-4 mt-2 rounded hover:bg-red-800 text-2xl lg:text-base">Je reçois mon verset</button>
+    </form>
+  </div>
+</body>
+</html>
